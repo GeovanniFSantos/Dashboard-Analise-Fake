@@ -6,7 +6,7 @@ from modulos.config import COLUNA_CHAVE_CONSOLIDADA, Relatorio
 from modulos.dados import carregar_credenciais_lojas 
 
 def show_login(df_global):
-    st.markdown("<h1 style='text-align: center;'>🔐 Acesso Gabriel Pro</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center;'>🔐 Acesso Associação Casa Avant</h1>", unsafe_allow_html=True)
     
     col1, col2, col3 = st.columns([1, 2, 1])
     

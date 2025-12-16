@@ -4,7 +4,7 @@ from modulos.config import Relatorio
 
 # 1. Configuração da página (DEVE ser a primeira linha)
 st.set_page_config(
-    page_title="Gestão Gabriel Pro",
+    page_title="Gestão Associação Casa Avant",
     layout="wide",
     initial_sidebar_state="expanded"
 )
