@@ -126,7 +126,7 @@ def show_store_dashboard(df_global, store_name):
     # =======================================================================
     # ITEM 1: COMPARATIVO DE DESEMPENHO (Lógica Ajustada: Meses Equivalentes)
     # =======================================================================
-    st.subheader("1. Comparativo de Desempenho (Loja/Segmento vs Gabriel Pro)")
+    st.subheader("1. Comparativo de Desempenho (Loja/Segmento vs Associação Casa Avant)")
     
     temporada_selecionada_item1 = st.selectbox(
         "Selecione a Temporada de Análise (Item 1):",
@@ -198,10 +198,10 @@ def show_store_dashboard(df_global, store_name):
     ev_pts = calcular_evolucao_raw(pontos_loja, pontos_ant)
     
     # Participação %
-    pc_ped = calcular_evolucao_raw(pedidos_loja, pedidos_segmento)
-    pc_vm = calcular_evolucao_raw(valor_medio_loja, valor_medio_segmento)
-    pc_cli = calcular_evolucao_raw(novos_clientes_loja, novos_clientes_segmento)
-    pc_pts = calcular_evolucao_raw(pontos_loja, pontos_segmento)
+    pc_ped = pedidos_loja / pedidos_segmento if pedidos_segmento > 0 else 0
+    pc_vm = valor_medio_loja / valor_medio_segmento if valor_medio_segmento > 0 else 0
+    pc_cli = novos_clientes_loja / novos_clientes_segmento if novos_clientes_segmento > 0 else 0
+    pc_pts = pontos_loja / pontos_segmento if pontos_segmento > 0 else 0
 
     # Tabela Item 1
     dados_comp = {
